@@ -5,6 +5,8 @@ import Dashboard from "./pages/dashboard/Dashboard";
 import useAuthStore from "./store/authStore";
 import Profile from "./pages/profile/Profile";
 import Settings from "./pages/settings/Settings";
+import Loans from "./pages/loans/Loans";
+import LoanForm from "./pages/loans/LoanForm";
 
 
 
@@ -19,6 +21,9 @@ export default function App() {
       <Routes>
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/loans" element={<ProtectedRoute><Loans /></ProtectedRoute>} />
+        <Route path="/loans/add" element={<ProtectedRoute><LoanForm /></ProtectedRoute>} />
+        <Route path="/loans/:id/edit" element={<ProtectedRoute><LoanForm /></ProtectedRoute>} />
         <Route
           path="/"
           element={
