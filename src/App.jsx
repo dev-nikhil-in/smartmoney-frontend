@@ -1,7 +1,12 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Login from "./pages/auth/Login";
 import Register from "./pages/auth/Register";
+import Dashboard from "./pages/dashboard/Dashboard";
 import useAuthStore from "./store/authStore";
+import Profile from "./pages/profile/Profile";
+import Settings from "./pages/settings/Settings";
+
+
 
 function ProtectedRoute({ children }) {
   const token = useAuthStore((s) => s.token);
@@ -18,11 +23,27 @@ export default function App() {
           path="/"
           element={
             <ProtectedRoute>
-              <div>Dashboard coming soon...</div>
+              <Dashboard />
             </ProtectedRoute>
           }
         />
-      </Routes>
+        <Route 
+          path="/profile" 
+          element={
+            <ProtectedRoute>
+              <Profile />
+            </ProtectedRoute>
+            }
+          />
+        <Route
+          path="/settings"
+          element={
+            <ProtectedRoute>
+              <Settings />
+            </ProtectedRoute>
+          }
+        />
+       </Routes>
     </BrowserRouter>
   );
 }
