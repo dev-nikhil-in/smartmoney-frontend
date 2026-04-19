@@ -7,6 +7,9 @@ import Profile from "./pages/profile/Profile";
 import Settings from "./pages/settings/Settings";
 import Loans from "./pages/loans/Loans";
 import LoanForm from "./pages/loans/LoanForm";
+import Strategy from "./pages/strategy/Strategy";
+import Simulator from "./pages/simulator/Simulator";
+import Calculators from "./pages/calculators/Calculators";
 
 
 
@@ -24,6 +27,10 @@ export default function App() {
         <Route path="/loans" element={<ProtectedRoute><Loans /></ProtectedRoute>} />
         <Route path="/loans/add" element={<ProtectedRoute><LoanForm /></ProtectedRoute>} />
         <Route path="/loans/:id/edit" element={<ProtectedRoute><LoanForm /></ProtectedRoute>} />
+        <Route path="/strategy" element={<ProtectedRoute><Strategy /></ProtectedRoute>} />
+        <Route path="/simulator" element={<ProtectedRoute><Simulator /></ProtectedRoute>} />
+        <Route path="/calculators" element={<ProtectedRoute><Calculators /></ProtectedRoute>} />
+
         <Route
           path="/"
           element={
