@@ -10,7 +10,7 @@ createRoot(document.getElementById('root')).render(
     <GoogleOAuthProvider clientId={import.meta.env.VITE_GOOGLE_CLIENT_ID}>
       <App />
       <Toaster
-        position="top-right"
+        position="top-center"
         richColors
         expand={false}
         duration={3000}
