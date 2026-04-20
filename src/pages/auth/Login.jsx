@@ -71,7 +71,7 @@ export default function Login() {
         <div className="max-w-md w-full mx-auto space-y-8">
 
            {/* Logo — bigger this time */}
-              <img src={logo} alt="Nivtron SmartMoney" className="h-[220px]w-auto" />
+              <img src={logo} alt="Nivtron SmartMoney" className="h-[220px] w-auto" />
 
           {/* Heading */}
           <div>

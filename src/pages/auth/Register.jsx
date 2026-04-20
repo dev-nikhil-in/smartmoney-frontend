@@ -122,7 +122,7 @@ export default function Register() {
         <div className="max-w-md w-full mx-auto space-y-8">
 
           {/* Logo */}
-          <img src={logo} alt="SmartMoney" className="h-12 w-auto" />
+          <img src={logo} alt="SmartMoney" className="h-[220px] w-auto" />
 
           {/* Heading */}
           <div>
